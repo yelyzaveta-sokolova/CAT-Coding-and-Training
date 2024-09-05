@@ -7,7 +7,7 @@ import './js/FAQ';
 import './js/covers';
 import './js/reviews';
 import './js/footer';
-import './js/modale-window';
+import './js/modal-window';
 import './js/mobile-menu';
 
 
