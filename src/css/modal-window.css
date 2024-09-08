@@ -14,7 +14,7 @@
     max-height: 276px;
     z-index: 1001;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41);
 }
 
 .modal-window.show {
@@ -31,7 +31,7 @@
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41);
 }
 
 .modal-overlay.show {
