@@ -1,0 +1,153 @@
+.benefits-container {
+    padding: 82px 0 82px 0;
+    background-color: #1C1D20;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.benefits-title {
+width: 284px;
+font-weight: 600;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+color: rgba(250, 250, 250, 0.4);
+}
+
+.benefits-title-cont {
+    margin-bottom: 32px;
+}
+
+.benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.benefits-item {
+    background-color: #242527;
+    border-radius: 20px;
+    padding: 24px;
+    width: 344px;
+    height: 270px;
+}
+
+.icon-benefits {
+    margin-bottom: 64px;
+}
+
+.benefits-item-title {
+font-weight: 600;
+font-size: 20px;
+line-height: 150%;
+letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    color: #FAFAFA;
+}
+
+.benefits-item-content {
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.02em;
+color: rgba(250, 250, 250, 0.6);
+}
+
+.benefits-btn {
+    border: 1px solid #242527;
+    border-radius: 60px;
+    color: #FAFAFA;
+    width: 187px;
+    height: 55px;
+    background: none;
+    margin-top: 32px;
+font-weight: 500;
+font-size: 16px;
+letter-spacing: -0.02em;
+}
+
+.benefits-btn:hover {
+    background:#ED3B44
+}
+
+@media screen and (min-width: 320) and (max-width: 374px) {
+    .benefits-container {
+    width: 100%;
+    }
+
+    .benefits-item {
+        max-width: 344px;
+        max-height: 270px;
+    }
+    
+    .benefits-item-content {
+        max-width: 296px;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .benefits-container {
+    width: 375px;
+    margin: 0 16px 0 16px;
+    }
+
+    .benefits-item {
+        max-width: 344px;
+        max-height: 270px;
+    }
+    
+    .benefits-item-content {
+        max-width: 296px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .benefits-container {
+    width: 768px;
+    margin: 0 32px 0 32px;
+
+    } 
+
+    .benefits-title {
+        size: 16px;
+    }
+    
+    .benefits-item {
+        min-width: 344px;
+        min-height: 270px;
+    }
+
+    .benefits-item-content {
+        max-width: 296px;
+    }
+
+    .benefits-btn {
+        margin-top: 64px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .benefits-container {
+    min-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start; 
+    }
+
+
+.benefits-item {
+    width: 332px;
+}
+
+.benefits-item-content {
+    max-width: 284px;
+}
+
+.benefits-title-cont,
+.benefits-list-cont {width: 50%;
+  height: 100vh; 
+  float: left;}
+
+}
