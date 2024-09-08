@@ -1,0 +1,128 @@
+.section-faq {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.title-faq {
+  color: rgba(250, 250, 250, 0.4);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+  margin-bottom: 32px;
+}
+
+.ac-trigger {
+  background-color: transparent;
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #fafafa;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: -0.4px;
+  cursor: pointer;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.ac {
+  flex: 1 1 100%;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.ac:first-child {
+  border-top: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+
+.icon {
+  stroke-width: 2;
+  transition: transform 0.3s ease;
+}
+
+.ac-panel {
+  max-height: 0;
+  overflow: hidden;
+  color: rgba(250, 250, 250, 0.6);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+  transition: max-height 0.3s ease;
+  padding: 0;
+}
+
+.ac-panel > .ac-text {
+  margin-bottom: 20px;
+}
+
+.ac.is-active .ac-panel {
+  max-height: 1000px;
+}
+
+.ac.is-active .icon {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+  .section-faq {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .ac-trigger {
+    padding-top: 32px;
+    padding-bottom: 42px;
+  }
+
+  .ac:last-child .ac-trigger {
+    padding-bottom: 32px;
+  }
+
+  .ac-panel > .ac-text {
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-faq {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+
+  .accordion-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .ac {
+    flex: 1 1 48%;
+  }
+
+  .ac:nth-child(odd) {
+    border-right: 1px solid rgba(250, 250, 250, 0.2);
+    padding-right: 32px;
+  }
+
+  .ac:nth-child(2) {
+    border-top: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  .ac:nth-child(even) {
+    padding-left: 32px;
+  }
+}
