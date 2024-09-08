@@ -3,41 +3,41 @@ import "swiper/css/bundle";
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-const reviewCards = document.querySelector(".js-review-cards");
-console.log(reviewCards);
-const buttonNext = document.querySelector(".swiper-button-next");
-const buttonPrev = document.querySelector(".swiper-button-prev");
+const REVIEW_CARDS = document.querySelector(".js-review-cards");
+console.log(REVIEW_CARDS);
+const BUTTON_NEXT = document.querySelector(".swiper-button-next");
+const BUTTON_PREV = document.querySelector(".swiper-button-prev");
 
 const BASE_URL = 'https://portfolio-js.b.goit.study/api';
 
-const getUsers = async () => {
-    const fetchOptions = {
+const GET_USERS = async () => {
+    const FETCH_OPTIONS = {
         method: 'GET',
     };
     try {
-        const response = await fetch(`${BASE_URL}/reviews`, fetchOptions);
+        const response = await fetch(`${BASE_URL}/reviews`, FETCH_OPTIONS);
         if (!response.ok) {
             throw new Error(response.status);
         }
-        const data = await response.json();
-        return data;
+        const DATA = await response.json();
+        return DATA;
     } catch {
         console.error('Error fetching users:', error);
     }
 };
-    getUsers()
-        .then(data => {
-        console.log(data);
-        renderPosts(data);
+    GET_USERS()
+        .then(DATA => {
+        console.log(DATA);
+        renderPosts(DATA);
         initializeSwiper();
 })
 .catch(error => {
     console.error('Error in getUsers:', error);
 });
 
-function renderPosts(data) {
-    reviewCards.innerHTML = '';
-    const markup = data
+function renderPosts(DATA) {
+    REVIEW_CARDS.innerHTML = '';
+    const markup = DATA
     .map(({ author, avatar_url, review }) => {
         return `<li class="review-posts swiper-slide">
             <img class="avatar" src="${avatar_url}" alt="Avatar of ${author}">
@@ -46,7 +46,7 @@ function renderPosts(data) {
         </li>`;
     })
     .join("");
-  reviewCards.insertAdjacentHTML("beforeend", markup);
+  REVIEW_CARDS.insertAdjacentHTML("beforeend", markup);
 };
 
 
@@ -54,7 +54,7 @@ function renderPosts(data) {
 
 async function initializeSwiper() {
     try {
-        const swiper = new Swiper('.swiper', {
+        const SWIPER = new Swiper('.swiper', {
             direction: 'horizontal',
             autoHeight: false,
             observer: true,
@@ -67,8 +67,8 @@ async function initializeSwiper() {
                 sensitivity: 1,
             },
             navigation: {
-                nextEl: buttonNext,
-                prevEl: buttonPrev,
+                nextEl: BUTTON_NEXT,
+                prevEl: BUTTON_PREV,
             },
             slidesPerView: 1,
             breakpoints: {
