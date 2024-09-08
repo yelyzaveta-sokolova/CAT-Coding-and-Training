@@ -1,22 +1,24 @@
 import Swiper from 'swiper/bundle';
-import 'swiper/css';
 
- const swiper = new Swiper('.projects-swiper', {
-   slidesPerView: 'auto',
-   spaceBetween: 10,
-   navigation: {
-     nextEl: '.swiper-button-next',
-     prevEl: '.swiper-button-prev',
-   },
-   keyboard: {
-     enabled: true,
-     onlyInViewport: false,
-   },
-   mousewheel: true,
-   pagination: {
-     el: '.swiper-pagination',
-     clickable: true,
-   },
- });
+import 'swiper/css/bundle';
 
-// const swiper = document.querySelector('.projects-swiper');
+const SWIPER = new Swiper('.swiper', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  direction: 'horizontal',
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  speed: 900,
+});
+
+
+
+
+
