@@ -47,6 +47,7 @@
   height: 40px;
   border-radius: 100px;
   flex-shrink: 0;
+  border: 1px solid rgba(250, 250, 250, 0.2);
 }
 
 .icon {
