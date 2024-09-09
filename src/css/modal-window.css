@@ -49,6 +49,8 @@
     background-color: inherit;
     border: none;
     cursor: pointer;
+    width: 22px;
+    height: 22px;
 }
 
 .close-modal-icon {
@@ -62,11 +64,13 @@
     align-items: center;
     gap: 16px;
     padding: 0;
+    min-width: 279px;
+    height: 148px;
 }
 
 .modal-heading {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5;
     letter-spacing: -0.02em;
     text-align: center;
@@ -75,7 +79,7 @@
 
 .modal-text {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     letter-spacing: -0.02em;
     text-align: center;
@@ -90,9 +94,19 @@
         max-height: 246px;
     }
 
+    .close-modal-btn {
+        width: 24px;
+        height: 24px;
+    }
+
     .close-modal-icon {
         width: 24px;
         height: 24px;
+    }
+
+    .modal-info {
+        min-width: 364px;
+        height: 118px;
     }
 
     .modal-heading {
