@@ -153,7 +153,8 @@ height: 100%;
     z-index: 20;
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 50%;
-    transition: fill 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41);
+    transition: fill 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41),
+  border 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41);
 }
 
 .btn-scroll-top-icon {
