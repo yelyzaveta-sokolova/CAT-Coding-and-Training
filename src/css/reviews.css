@@ -74,7 +74,7 @@
 
 #prev:hover .icon,
 #next:hover .icon {
-    stroke: #E0373F;
+    stroke: hsl(0, 20%, 96%);
 }
 
 .buttons .icon {
@@ -108,17 +108,23 @@
     margin-top: 32px;
 }
 
-@media screen and (min-width: 1440px) {
-    .review-post {
-        width: 332px;
-    }
-}
-
 @media screen and (min-width: 768px) {
-
     #prev,
     #next {
         width: 68px;
         height: 68px;
+    }
+    .buttons .icon{
+        width: 32px;
+        height: 32px;
+    }
+    .buttons {
+        gap: 20px;
+}
+}
+
+@media screen and (min-width: 1440px) {
+    .review-post {
+        width: 332px;
     }
 }

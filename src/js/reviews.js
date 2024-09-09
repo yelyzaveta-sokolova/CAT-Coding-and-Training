@@ -4,7 +4,6 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const REVIEW_CARDS = document.querySelector(".js-review-cards");
-console.log(REVIEW_CARDS);
 const BUTTON_NEXT = document.querySelector(".swiper-button-next");
 const BUTTON_PREV = document.querySelector(".swiper-button-prev");
 
@@ -22,7 +21,13 @@ const GET_USERS = async () => {
         const DATA = await response.json();
         return DATA;
     } catch {
-        console.error('Error fetching users:', error);
+        {
+            iziToast.error({
+                title: 'Error',
+                message: 'Sorry, something went wrong with reviews.',
+                position: 'center',
+            });
+        }
     }
 };
     GET_USERS()
@@ -32,7 +37,13 @@ const GET_USERS = async () => {
         initializeSwiper();
 })
 .catch(error => {
-    console.error('Error in getUsers:', error);
+    {
+            iziToast.error({
+                title: 'Error',
+                message: 'Sorry, something went wrong with reviews.',
+                position: 'center',
+            });
+        }
 });
 
 function renderPosts(DATA) {
@@ -52,7 +63,7 @@ function renderPosts(DATA) {
 
 // // реалізація свайпу
 
-async function initializeSwiper() {
+function initializeSwiper() {
     try {
         const SWIPER = new Swiper('.swiper', {
             direction: 'horizontal',
