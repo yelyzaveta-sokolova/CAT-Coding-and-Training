@@ -1,15 +1,26 @@
-<header class="header" id="header"></header>
+<header class="header container" id="header">
   <div class="header-container">
     <div class="header-elements">
+      <!-- Лого -->
       <a
         class="header-logo"
         href="index.html"
         tabindex="0"
         aria-label="Homepage"
       >
-        <img srcset="./img/header/jefferson.png 1x, ./img/header/jefferson@2x.png 2x" alt="logo" loading="lazy" />
+        <img
+          src="./img/header/jefferson.png"
+          srcset="
+            ./img/header/jefferson.png    1x,
+            ./img/header/jefferson@2x.png 2x
+          "
+          alt="logo"
+          loading="lazy"
+        />
         <p class="jefferson">jefferson*</p>
       </a>
+
+      <!-- Кнопка для десктопного меню -->
       <button
         class="menu-btn js-open-desktop-menu"
         tabindex="0"
@@ -17,16 +28,26 @@
         aria-expanded="false"
         aria-label="Open menu"
       >
-      Menu
+        Menu
       </button>
+
+      <!-- Кнопка замовлення проекту -->
       <a
-        href="#footer"
+        href="#work-together"
         class="hdr-order-btn"
         tabindex="0"
         aria-label="Order the project"
-        >Order the project</a
       >
-      <button class="burger-btn js-open-mobile-menu">
+        Order the project
+      </a>
+
+      <!-- Кнопка для мобільного меню (бургер) -->
+      <button
+        class="burger-btn js-open-mobile-menu"
+        aria-label="Open mobile menu"
+        role="button"
+        aria-expanded="false"
+      >
         <svg class="burger-btn-svg" width="28" height="28">
           <use href="./img/icons.svg#icon-burger-menu"></use>
         </svg>
@@ -34,16 +55,16 @@
     </div>
   </div>
 
-  <!-- Mobile menu -->
-
-  <div class="mobile-menu js-menu-container">
+  <!-- Мобільне меню -->
+  <div class="mobile-menu js-menu-container" aria-hidden="true">
     <div class="open-mob-menu">
       <button
         class="menu-btn-close js-close-mobile-menu"
         type="button"
         aria-label="Close menu button"
+        role="button"
       >
-        <svg class="menu-btn-close" width="28" height="28">
+        <svg class="close-icon" width="28" height="28">
           <use href="./img/icons.svg#icon-x"></use>
         </svg>
       </button>
@@ -66,12 +87,16 @@
       </ul>
     </nav>
 
-    <a href="#footer" class="order-btn-menu">Order the project</a>
+    <!-- Кнопка замовлення з мобільного меню -->
+    <a href="#work-together" class="order-btn-menu">Order the project</a>
   </div>
 
-  <!-- Desktop and tablet menu -->
-
-  <div class="desktop-menu js-desktop-menu" id="desktop-menu">
+  <!-- Десктопне меню -->
+  <div
+    class="desktop-menu js-desktop-menu"
+    id="desktop-menu"
+    aria-hidden="true"
+  >
     <nav>
       <ul class="desktop-menu-list">
         <li class="desktop-menu-item">

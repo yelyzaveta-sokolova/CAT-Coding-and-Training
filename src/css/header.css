@@ -1,285 +1,232 @@
+/* Основні стилі для header */
 .header {
-  margin: 0 auto;
-  position: fixed;
-  top: 0px;
+  position: absolute; /* Змінено на absolute */
+  top: 0;
   left: 0;
   width: 100%;
+  background-color: transparent; /* Прозорий фон */
+  /* padding: 20px 0; */
+  padding-top: 32px;
+  padding-bottom: 32px;
   z-index: 1000;
-  background-image: linear-gradient(
-    360deg,
-    rgba(28, 29, 32, 0) 0%,
-    rgba(28, 29, 32, 0.2) 35%,
-    rgba(28, 29, 32, 1) 100%
-  );
+}
+
+html {
+  scroll-behavior: smooth; /* Плавний скрол */
+}
+
+/* Додаткові стилі */
+.hdr-order-btn:hover {
+  background-color: #d0323c;
 }
 
 .header-container {
-  max-width: 375px;
-  margin: 0 auto;
-  padding: 0px;
-  background-color: transparent;
-}
-
-.header-elements {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: flex-start;
-  margin: 32px 16px 0px 16px;
+  align-items: center;
 }
-
-/*  Logo  */
 
 .header-logo {
   display: flex;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  gap: 8px;
-  width: 172px;
-  height: 80px;
+  align-items: center;
+  text-decoration: none;
 }
 
-.header-logo > img {
-  width: 80px;
-  height: 80px;
+.header-logo img {
+  max-width: 100px;
+  margin-right: 8px;
 }
 
 .jefferson {
-  font-family: 'InterTight', sans-serif;
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  color: #fafafa;
 }
 
-/*  Nav  */
+/* Стилі для кнопок меню та інших елементів шапки */
+.menu-btn,
+.burger-btn {
+  background: none;
+  border: none;
+  color: #fafafa;
+  font-size: 16px;
+  cursor: pointer;
+}
 
 .menu-btn {
-  display: none;
-}
-
-.hdr-order-btn {
-  display: none;
-}
-
-.desktop-menu {
-  display: none;
-}
-
-.burger-btn {
-  display: flex;
-  background-color: transparent;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #fafafa;
+  background: none;
   border: none;
 }
 
 .burger-btn-svg {
-  stroke: #fafafa;
-  fill: none;
+  fill: #fafafa;
 }
 
-/*   Mobile menu   */
+.hdr-order-btn {
+  background-color: #ed3b44;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41);
+}
 
+.hdr-order-btn:hover {
+  background-color: #d0323c;
+}
+
+/* Мобільне меню */
 .mobile-menu {
   display: none;
   position: fixed;
-  top: -100%;
-  height: 100%;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin: 0 auto;
-  padding: 32px 16px 64px 16px;
-  align-items: center;
-  justify-content: space-between;
+  height: 100vh;
+  background-color: rgba(
+    28,
+    29,
+    32,
+    0.9
+  ); /* Залишити кольоровий фон з прозорістю, якщо потрібно */
+  z-index: 999;
+  overflow-y: auto;
+  padding-top: 60px;
+  background-size: cover; /* Адаптує зображення до розміру контейнера */
+  background-position: center; /* Центрує зображення */
+}
 
-  display: flex;
-  flex-direction: column;
-  background: url('./img/mobile-menu/bg-mobile@1x-min.png 1x, ./img/mobile-menu/bg-mobile@2x-min.png 2x'),
-    rgb(28, 29, 32);
-  background-size: 80% 100%, 20% 100%;
-  background-repeat: no-repeat;
-  background-position: left, right;
-  background-size: cover;
+/* Стандартне зображення */
+@media (max-resolution: 1dppx) {
+  .mobile-menu {
+    background-image: url('/img/mobile-menu/bg-mobile@1x-min.png');
+  }
+}
 
-  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
-  transition: top 0.3s ease-in-out;
-  z-index: 9999;
+/* Високоякісне зображення для Retina дисплеїв */
+@media (min-resolution: 2dppx) {
+  .mobile-menu {
+    background-image: url('/img/mobile-menu/bg-mobile@2x-min.png');
+  }
 }
 
 .mobile-menu.is-open {
-  top: 0;
-}
-
-.mobile-menu.open-mobile-menu {
-  display: flex;
-  transform: translateX(0);
-  width: 100vw;
-  height: 100vh;
+  display: block;
 }
 
 .mobile-menu-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu {
+  opacity: 0;
+  transition: 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41);
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
 }
 
 .mobile-menu-item {
-  font-family: 'InterTight', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  color: #fafafa;
-  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.mobile-menu-item::after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 100%;
-  bottom: 2px;
-  height: 1px;
-  background-color: #fafafa;
+.mobile-menu-link {
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fafafa;
 }
 
 .order-btn-menu {
-  display: flex;
-  font-family: 'InterTight', sans-serif;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 500;
-  width: 163px;
-  height: 55px;
+  display: block;
   background-color: #ed3b44;
   color: #fafafa;
-  border: none;
-  border-radius: 60px;
-  align-items: center;
-  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px auto;
+  width: 80%;
 }
 
+.order-btn-menu:hover {
+  background-color: #d0323c;
+}
+
+/* Кнопка закриття мобільного меню */
 .menu-btn-close {
   position: absolute;
-  right: 32px;
-  background-color: transparent;
+  top: 20px;
+  right: 20px;
+  background: none;
   border: none;
-  stroke: #fafafa;
-  fill: none;
+  color: #fafafa;
+  cursor: pointer;
 }
 
-/*  Media 768  */
+/* Десктопне меню */
+.desktop-menu {
+  display: none;
+}
+
+.desktop-menu.is-open {
+  display: block;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: rgba(28, 29, 32, 0.9);
+  padding: 20px;
+}
+
+.desktop-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-menu-item {
+  margin-bottom: 15px;
+}
+
+.desktop-menu-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fafafa;
+}
 
 @media screen and (min-width: 768px) {
-  .header-container {
-    max-width: 768px;
-    margin: 0 auto;
-  }
-
-  .header-elements {
-    margin: 32px 32px 0px 32px;
-  }
-
   .burger-btn {
     display: none;
   }
 
-  .menu-btn {
-    display: flex;
-    background-color: transparent;
-    border: none;
-    font-family: 'InterTight', sans-serif;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 500;
-    color: #fafafa;
-    position: relative;
-    margin-top: 10px;
-  }
-
-  .menu-btn::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    bottom: 2px;
-    height: 1px;
-    background-color: #fafafa;
-  }
-
-  .hdr-order-btn {
-    display: flex;
-    font-family: 'InterTight', sans-serif;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 500;
-    width: 172px;
-    height: 55px;
-    background-color: #ed3b44;
-    color: #fafafa;
-    border: none;
-    border-radius: 60px;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  /*   Menu   */
-
   .desktop-menu {
-    position: absolute;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    position: static;
     background-color: transparent;
-    top: 79px;
-    left: 0;
-    right: 0;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s ease 0.3s;
-    z-index: 9999;
-  }
-
-  .desktop-menu.is-open {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
   .desktop-menu-list {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: center;
-    justify-content: center;
+    gap: 20px;
   }
 
   .desktop-menu-item {
-    font-family: 'InterTight', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: #fafafa;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .no-scroll {
-    overflow: hidden;
-  }
-}
-
-/*  Media 1440  */
-
-@media screen and (min-width: 1440px) {
-  .header-container {
-    max-width: 1440px;
-  }
-
-  .hdr-order-btn:hover {
-    background-color: #e0373f;
-  }
-
-  .desktop-menu-item:hover {
-    color: #ed3b44;
+    margin-bottom: 0;
   }
 }
