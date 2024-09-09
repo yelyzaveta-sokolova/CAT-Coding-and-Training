@@ -32,8 +32,15 @@
     margin-top: 50%;
     margin-bottom: 50%;
 }
-.swiper-button-next{
+.swiper-button-next {
+    background-image: url(./img/icons.svg#icon-brush);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
 }
-.sbn{
-
+.swiper-button-next {
+    color: red;
 }
+/* .swiper-button-next::after {
+    display: none;
+} */
