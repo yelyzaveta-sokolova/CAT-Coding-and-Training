@@ -1,11 +1,12 @@
 .covers {
-  padding-bottom: 82px;
-  padding-top: 82px;
+  padding-bottom: 32px;
+  padding-top: 32px;
 }
 .covers-container {
   min-width: 320px;
   max-width: 375px;
   height: 508px;
+  padding: 0;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -66,6 +67,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .covers {
+    padding-bottom: 48px;
+    padding-top: 48px;
+  }
   .covers-container {
     max-width: 768px;
     height: 960px;
@@ -97,6 +102,10 @@
   }
 }
 @media screen and (min-width: 1440px) {
+  .covers {
+    padding-bottom: 82px;
+    padding-top: 82px;
+  }
   .covers-container {
     max-width: 1440px;
   }

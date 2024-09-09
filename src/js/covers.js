@@ -8,12 +8,10 @@ const OBSERVE_OPTIONS = {
 const OBSERVER_CALLBACK = entries => {
   if (entries[0].isIntersecting) {
     const TAGS = document.getElementsByClassName('marquee-line');
-    Array.from(TAGS).forEach(
-      tag => (tag.style = 'animation-name: marqueeLine')
-    );
+    Array.from(TAGS).forEach(tag => (tag.style.animationName = 'marqueeLine'));
   } else {
     const TAGS = document.getElementsByClassName('marquee-line');
-    Array.from(TAGS).forEach(tag => (tag.style = 'animation-name: none'));
+    Array.from(TAGS).forEach(tag => (tag.style.animationName = 'none'));
   }
 };
 const OBSERVER = new IntersectionObserver(OBSERVER_CALLBACK, OBSERVE_OPTIONS);
