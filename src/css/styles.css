@@ -1,5 +1,6 @@
 @import url('../../node_modules/modern-normalize/modern-normalize.css');
 @import url('../../node_modules/swiper/swiper-bundle.min.css');
+@import url('../../node_modules/izitoast/dist/css/iziToast.min.css');
 @import url('./fonts.css');
 @import url('./reset.css');
 @import url('./common.css');
@@ -15,6 +16,3 @@
 @import url('./reviews.css');
 @import url('./footer.css');
 @import url('./modal-window.css');
-
-
-
