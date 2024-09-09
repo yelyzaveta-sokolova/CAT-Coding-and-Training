@@ -22,6 +22,10 @@
                     justify-content: center;
 }
 
+.swiper-slide:hover,.swiper-slide:focus{
+    background: #ED3B44;
+}
+
 .skill-main {display: flex;
     
     justify-content: center;
