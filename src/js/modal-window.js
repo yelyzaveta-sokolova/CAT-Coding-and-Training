@@ -1,3 +1,5 @@
+import iziToast from 'izitoast';
+
 const SEND_BTN = document.querySelector('.js-footer-form-btn');
 const MODAL_WINDOW = document.querySelector('.modal-window');
 const MODAL_OVERLAY = document.querySelector('.modal-overlay');
