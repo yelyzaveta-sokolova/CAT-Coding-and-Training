@@ -64,6 +64,8 @@
     align-items: center;
     gap: 16px;
     padding: 0;
+    min-width: 279px;
+    height: 148px;
 }
 
 .modal-heading {
