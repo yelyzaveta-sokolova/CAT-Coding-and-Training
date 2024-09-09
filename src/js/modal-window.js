@@ -3,9 +3,19 @@ const MODAL_WINDOW = document.querySelector('.modal-window');
 const MODAL_OVERLAY = document.querySelector('.modal-overlay');
 const CLOSE_BTN = document.querySelector('.close-modal-btn');
 const FORM = document.querySelector('.js-footer-form');
+const USER_EMAIL_EL = document.querySelector('.js-footer-form-input');
+const USER_COMMENT_EL = document.querySelector('.js-comment');
 
 SEND_BTN.onclick = function(event) {
     event.preventDefault();
+
+    if (USER_EMAIL_EL.value.trim() === '' || USER_COMMENT_EL.value.trim() === '') {
+        iziToast.error({
+            title: 'Error:',
+            message: 'Please fill in the input fields',
+        });
+        return;
+    }
 
     MODAL_WINDOW.style.display = 'block';
     MODAL_OVERLAY.style.display = 'block';
