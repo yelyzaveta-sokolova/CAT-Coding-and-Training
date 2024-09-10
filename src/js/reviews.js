@@ -32,7 +32,6 @@ const GET_USERS = async () => {
 };
     GET_USERS()
         .then(DATA => {
-        console.log(DATA);
         renderPosts(DATA);
         initializeSwiper();
 })
@@ -40,7 +39,7 @@ const GET_USERS = async () => {
     {
             iziToast.error({
                 title: 'Error',
-                message: 'Sorry, something went wrong with reviews.',
+                message: 'Not found',
                 position: 'center',
             });
         }
@@ -97,7 +96,7 @@ function initializeSwiper() {
         {
             iziToast.error({
                 title: 'Error',
-                message: 'Sorry, something went wrong with reviews.',
+                message: 'Not found',
                 position: 'center',
             });
         }
