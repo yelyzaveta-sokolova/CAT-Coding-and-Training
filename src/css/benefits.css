@@ -68,6 +68,10 @@ font-size: 16px;
 letter-spacing: -0.02em;
 }
 
+.benefits-btn-link:hover {
+    border: 1px solid #fafafa;
+}
+
 @media screen and (min-width: 768px) {
     .benefits-item {
         min-width: 344px;
@@ -99,7 +103,8 @@ letter-spacing: -0.02em;
     max-width: 284px;
 }
 
-.benefits-list-cont {width: 50%;
+.benefits-list-cont {
+    width: 50%;
     height: 100vh; 
     float: left;}
 
