@@ -62,7 +62,6 @@ function errorList() {
    if (element) {
        element.remove();
    }
-
   const MARKUP = `<p class="main-text-with-opacity review-error">Not Found</p>`;
 
   REVIEW_CARDS.insertAdjacentHTML('beforebegin', MARKUP);
@@ -72,7 +71,7 @@ function errorList() {
 
 function initializeSwiper() {
     try {
-        const SWIPER = new Swiper('.swiper', {
+        const REVIEW_SWIPER = new Swiper('.swiper', {
             direction: 'horizontal',
             autoHeight: false,
             observer: true,
