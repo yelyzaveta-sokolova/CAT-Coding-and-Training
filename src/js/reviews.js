@@ -20,14 +20,8 @@ const GET_USERS = async () => {
         }
         const DATA = await response.json();
         return DATA;
-    } catch {
-        {
-            iziToast.error({
-                title: 'Error',
-                message: 'Sorry, something went wrong with reviews.',
-                position: 'center',
-            });
-        }
+    } catch (error) {
+        return error;
     }
 };
     GET_USERS()
@@ -39,26 +33,40 @@ const GET_USERS = async () => {
     {
             iziToast.error({
                 title: 'Error',
-                message: 'Not found',
+                message: 'Sorry, something went wrong with reviews.',
                 position: 'center',
             });
         }
+    errorList();
 });
 
 function renderPosts(DATA) {
     REVIEW_CARDS.innerHTML = '';
-    const markup = DATA
+    const MARKUP = DATA
     .map(({ author, avatar_url, review }) => {
         return `<li class="review-posts swiper-slide">
-            <img class="avatar" src="${avatar_url}" alt="Avatar of ${author}">
-            <h2 class="name-author">${author}</h2>
-            <p class="post-body">${review}</p>
+            <img class="review-avatar" src="${avatar_url}" alt="Avatar of ${author}">
+            <h2 class="review-author">${author}</h2>
+            <p class="review-post-body">${review}</p>
         </li>`;
     })
     .join("");
-  REVIEW_CARDS.insertAdjacentHTML("beforeend", markup);
+  REVIEW_CARDS.insertAdjacentHTML("beforeend", MARKUP);
 };
 
+// реалізація заглушки
+
+function errorList() {
+
+   const element = document.querySelector('.error');
+   if (element) {
+       element.remove();
+   }
+
+  const MARKUP = `<p class="main-text-with-opacity review-error">Not Found</p>`;
+
+  REVIEW_CARDS.insertAdjacentHTML('beforebegin', MARKUP);
+}
 
 // // реалізація свайпу
 
@@ -96,7 +104,7 @@ function initializeSwiper() {
         {
             iziToast.error({
                 title: 'Error',
-                message: 'Not found',
+                message: 'Sorry, something went wrong with reviews.',
                 position: 'center',
             });
         }

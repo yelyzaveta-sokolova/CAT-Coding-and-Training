@@ -3,7 +3,7 @@
     padding-bottom: 32px;
 }
 
-.title-general {
+.review-title-general {
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
@@ -31,7 +31,7 @@
     min-height: 350px
 }
 
-.avatar {
+.review-avatar {
     border-radius: 10px;
     width: 48px;
     height: 48px;
@@ -39,7 +39,7 @@
     margin-bottom: 32px;
 }
 
-.name-author {
+.review-author {
     font-weight: 600;
     font-size: 20px;
     line-height: 1.5;
@@ -48,15 +48,13 @@
     margin-bottom: 8px;
 }
 
-.post-body {
+.review-post-body {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: -0.02em;
     color: rgba(250, 250, 250, 0.6);
 }
-
-
 
 /* реалізація кнопки свайпа */
 
@@ -73,12 +71,12 @@
     transition: color 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41);
 }
 
-#prev:hover .icon,
-#next:hover .icon {
+#prev:hover .review-icon,
+#next:hover .review-icon {
     stroke: rgba(250, 250, 250, 1);
 }
 
-.buttons .icon {
+.review-buttons .review-icon {
     fill: none;
     stroke: rgba(250, 250, 250, 1);
     width: 24px;
@@ -100,7 +98,7 @@
     height: 52px;
 }
 
-.buttons {
+.review-buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -109,20 +107,29 @@
     margin-top: 32px;
 }
 
+.review-error {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.4);
+    text-align: center;
+}
+
 @media screen and (min-width: 768px) {
     #prev,
     #next {
         width: 68px;
         height: 68px;
     }
-    .buttons .icon{
+    .review-buttons .review-icon{
         width: 32px;
         height: 32px;
     }
-    .buttons {
+    .review-buttons {
         gap: 20px;
 }
-    .review {
+    .review-review {
         padding-top: 48px;
         padding-bottom: 48px;
 }
