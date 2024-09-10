@@ -21,8 +21,8 @@
   justify-content: space-between;
   color: #fafafa;
   font-weight: 600;
-  line-height: 30px;
-  letter-spacing: -0.4px;
+line-height: 1.5;
+  letter-spacing: -0.02em;
   cursor: pointer;
   gap: 20px;
   padding: 20px 0;
@@ -39,12 +39,12 @@
   border-top: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.icon-wrapper {
+.faq-icon-wrapper {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 100px;
   flex-shrink: 0;
   border: 1px solid rgba(250, 250, 250, 0.2);
@@ -85,7 +85,7 @@
     padding-bottom: 48px;
   }
 
-  .icon-wrapper {
+  .faq-icon-wrapper {
     width: 40px;
     height: 40px;
   }
