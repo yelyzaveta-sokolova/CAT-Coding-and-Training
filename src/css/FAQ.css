@@ -7,12 +7,12 @@
   color: rgba(250, 250, 250, 0.4);
   font-size: 16px;
   font-weight: 600;
-  line-height: 24px;
-  letter-spacing: -0.32px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
   margin-bottom: 32px;
 }
 
-.ac-trigger {
+.faq-ac-trigger {
   background-color: transparent;
   width: 100%;
   text-align: left;
@@ -28,14 +28,14 @@
   padding: 20px 0;
 }
 
-.ac {
+.faq-ac {
   flex: 1 1 100%;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
 
-.ac:first-child {
+.faq-ac:first-child {
   border-top: 1px solid rgba(250, 250, 250, 0.2);
 }
 
@@ -43,39 +43,39 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   border-radius: 100px;
   flex-shrink: 0;
   border: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.icon {
+.faq-icon {
   stroke-width: 2;
   transition: transform 0.3s ease;
 }
 
-.ac-panel {
+.faq-ac-panel {
   max-height: 0;
   overflow: hidden;
   color: rgba(250, 250, 250, 0.6);
   font-size: 16px;
   font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.32px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
   transition: max-height 0.3s ease;
   padding: 0;
 }
 
-.ac-panel > .ac-text {
+.faq-ac-panel > .faq-ac-text {
   margin-bottom: 20px;
 }
 
-.ac.is-active .ac-panel {
+.faq-ac.faq-is-active .faq-ac-panel {
   max-height: 1000px;
 }
 
-.ac.is-active .icon {
+.faq-ac.faq-is-active .faq-icon {
   transform: rotate(180deg);
 }
 
@@ -85,16 +85,21 @@
     padding-bottom: 48px;
   }
 
-  .ac-trigger {
+  .icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .faq-ac-trigger {
     padding-top: 32px;
     padding-bottom: 42px;
   }
 
-  .ac:last-child .ac-trigger {
+  .faq-ac:last-child .ac-trigger {
     padding-bottom: 32px;
   }
 
-  .ac-panel > .ac-text {
+  .faq-ac-panel > .faq-ac-text {
     margin-bottom: 24px;
   }
 }
@@ -105,25 +110,29 @@
     padding-bottom: 82px;
   }
 
-  .accordion-container {
+  .faq-accordion-container {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .ac {
+  .faq-ac {
     flex: 1 1 48%;
   }
 
-  .ac:nth-child(odd) {
+  .faq-ac-panel > .faq-ac-text {
+    margin-bottom: 26px;
+  }
+
+  .faq-ac:nth-child(odd) {
     border-right: 1px solid rgba(250, 250, 250, 0.2);
     padding-right: 32px;
   }
 
-  .ac:nth-child(2) {
+  .faq-ac:nth-child(2) {
     border-top: 1px solid rgba(250, 250, 250, 0.2);
   }
 
-  .ac:nth-child(even) {
+  .faq-ac:nth-child(even) {
     padding-left: 32px;
   }
 }
