@@ -1,60 +1,56 @@
-import iziToast from 'izitoast';
-
-const SEND_BTN = document.querySelector('.js-footer-form-btn');
+const FOOTER_EL = document.querySelector('footer');
 const MODAL_WINDOW = document.querySelector('.modal-window');
 const MODAL_OVERLAY = document.querySelector('.modal-overlay');
 const CLOSE_BTN = document.querySelector('.close-modal-btn');
 const FORM = document.querySelector('.js-footer-form');
-const USER_EMAIL_EL = document.querySelector('.js-footer-form-input');
-const USER_COMMENT_EL = document.querySelector('.js-comment');
+const MODAL_HEADING_EL = document.querySelector('.modal-heading');
+const MODAL_TEXT_EL = document.querySelector('.modal-text');
 
-SEND_BTN.onclick = function(event) {
-    event.preventDefault();
+export const OPEN_MODAL = (title, message) => {
+  MODAL_HEADING_EL.textContent = title;
+  MODAL_TEXT_EL.textContent = message;
 
-    if (USER_EMAIL_EL.value.trim() === '' || USER_COMMENT_EL.value.trim() === '') {
-        iziToast.error({
-            title: 'Error:',
-            message: 'Please fill in the input fields',
-        });
-        return;
-    }
-
-    MODAL_WINDOW.style.display = 'block';
-    MODAL_OVERLAY.style.display = 'block';
-
-    setTimeout(() => {
-        MODAL_WINDOW.classList.add('show');
-        MODAL_OVERLAY.classList.add('show');
-    }, 10);
+  MODAL_WINDOW.style.display = 'block';
+  MODAL_OVERLAY.style.display = 'block';
+  MODAL_WINDOW.classList.add('show');
+  MODAL_OVERLAY.classList.add('show');
 };
 
-CLOSE_BTN.onclick = function() {
-    closeModal();
+CLOSE_BTN.onclick = function () {
+  CLOSE_MODAL();
 };
 
-window.onclick = function(event) {
-    if (event.target == MODAL_OVERLAY) {
-        closeModal();
-        FORM.reset();
-    }
+window.onclick = function (event) {
+  if (event.target == MODAL_OVERLAY) {
+    CLOSE_MODAL();
+    FORM.reset();
+  }
 };
 
-window.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-        closeModal();
-    }
+window.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    CLOSE_MODAL();
+  }
 });
 
 CLOSE_BTN.addEventListener('click', () => {
-    FORM.reset();
+  FORM.reset();
 });
 
-function closeModal() {
-    MODAL_WINDOW.classList.remove('show');
-    MODAL_OVERLAY.classList.remove('show');
+export const CLOSE_MODAL = () => {
+  MODAL_WINDOW.classList.remove('show');
+  MODAL_OVERLAY.classList.remove('show');
+  MODAL_WINDOW.style.display = 'none';
+  MODAL_OVERLAY.style.display = 'none';
+};
 
-    setTimeout(() => {
-        MODAL_WINDOW.style.display = 'none';
-        MODAL_OVERLAY.style.display = 'none';
-    }, 1000);
-}
+const CHECK_SCROLL_POSITION = () => {
+  const footerRect = FOOTER_EL.getBoundingClientRect();
+
+  if (footerRect.top < window.innerHeight) {
+    MODAL_WINDOW.style.display = 'none';
+    MODAL_OVERLAY.style.display = 'none';
+  }
+};
+
+window.addEventListener('scroll', CHECK_SCROLL_POSITION);

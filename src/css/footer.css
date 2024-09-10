@@ -84,6 +84,7 @@
 
 .js-message {
   position: absolute;
+  display: block;
   margin-top: 4px;
   font-size: 14px;
   line-height: 1.28;
@@ -220,8 +221,14 @@
     padding-top: 82px;
   }
   .footer-container {
+    padding-left: 161px;
+    padding-right: 161px;
     background-image: url('../img/footer/bg-desktop-min.jpg');
     background-position: right top;
+  }
+
+  .footer-form-input {
+    width: 390px;
   }
 
   .footer-form-btn {
