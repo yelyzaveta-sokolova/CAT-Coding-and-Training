@@ -64,7 +64,7 @@ const ON_FORM_FIELD_INPUT = event => {
 
 FORM_EL.addEventListener('input', ON_FORM_FIELD_INPUT);
 
-const ON_SEND_FORM_DATA = async event => {
+export const ON_SEND_FORM_DATA = async event => {
   event.preventDefault();
 
   if (
@@ -88,7 +88,7 @@ const ON_SEND_FORM_DATA = async event => {
     console.log(response);
     FORM_EL.reset();
     localStorage.removeItem('comment-form');
-    OPEN_MODAL();
+    OPEN_MODAL(response.data.title, response.data.message);
     USER_EMAIL_EL.classList.remove('error', 'success');
     MESSAGE_OUTPUT_EL.classList.add('is-hidden');
   } catch (err) {

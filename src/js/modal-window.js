@@ -1,19 +1,19 @@
-import iziToast from 'izitoast';
-
 const FOOTER_EL = document.querySelector('footer');
 const MODAL_WINDOW = document.querySelector('.modal-window');
 const MODAL_OVERLAY = document.querySelector('.modal-overlay');
 const CLOSE_BTN = document.querySelector('.close-modal-btn');
 const FORM = document.querySelector('.js-footer-form');
+const MODAL_HEADING_EL = document.querySelector('.modal-heading');
+const MODAL_TEXT_EL = document.querySelector('.modal-text');
 
-export const OPEN_MODAL = () => {
+export const OPEN_MODAL = (title, message) => {
+  MODAL_HEADING_EL.textContent = title;
+  MODAL_TEXT_EL.textContent = message;
+
   MODAL_WINDOW.style.display = 'block';
   MODAL_OVERLAY.style.display = 'block';
-
-  setTimeout(() => {
-    MODAL_WINDOW.classList.add('show');
-    MODAL_OVERLAY.classList.add('show');
-  }, 10);
+  MODAL_WINDOW.classList.add('show');
+  MODAL_OVERLAY.classList.add('show');
 };
 
 CLOSE_BTN.onclick = function () {
@@ -40,11 +40,8 @@ CLOSE_BTN.addEventListener('click', () => {
 export const CLOSE_MODAL = () => {
   MODAL_WINDOW.classList.remove('show');
   MODAL_OVERLAY.classList.remove('show');
-
-  setTimeout(() => {
-    MODAL_WINDOW.style.display = 'none';
-    MODAL_OVERLAY.style.display = 'none';
-  }, 1000);
+  MODAL_WINDOW.style.display = 'none';
+  MODAL_OVERLAY.style.display = 'none';
 };
 
 const CHECK_SCROLL_POSITION = () => {
