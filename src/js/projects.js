@@ -2,7 +2,7 @@ import Swiper from 'swiper/bundle';
 
 import 'swiper/css/bundle';
 
-const SWIPER = new Swiper('.swiper', {
+const SWIPER_PROJECTS = new Swiper('.swiper', {
   slidesPerView: 1,
   spaceBetween: 30,
   direction: 'horizontal',

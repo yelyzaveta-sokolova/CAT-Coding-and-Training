@@ -1,5 +1,6 @@
 .projects {
   padding-top: 32px;
+  padding-bottom: 32px;
   width: 343px;
   height: 952px;
   padding-left: 0;
@@ -17,9 +18,7 @@
 .projects-swiper {
   overflow: hidden;
 }
-.swiper-wrapper {
-  height: 812px;
-}
+
 .swiper-slide-part-1 {
   background: #fafafa;
   height: 417px;
@@ -84,7 +83,7 @@
   align-items: center;
   gap: 12px;
   padding-top: 32px;
-  padding-bottom: 32px;
+  
 }
 #prev,
 #next {
@@ -110,15 +109,15 @@
   stroke: #3b3b3b;
 }
 
-.icon {
+.projects-icon {
   fill: none;
   stroke: rgba(250, 250, 250, 0.5);
 }
-.icon-prev {
+.projects-icon-prev {
   transform: rotate(-180deg);
 }
-.swiper-button-prev svg,
-.swiper-button-next svg {
+.projects-prev.swiper-button-prev svg,
+.projects-next.swiper-button-next svg {
   width: 24px;
   height: 24px;
 }
@@ -135,6 +134,7 @@
     width: 704px;
     height: 1379px;
     padding-top: 48px;
+    padding-bottom: 48px;
   }
   .swiper-slide-part-1 {
     height: 566px;
@@ -167,15 +167,15 @@
   }
   .projects-arrows {
     padding-top: 64px;
-    padding-bottom: 48px;
+    
   }
   #prev,
   #next {
     width: 68px;
     height: 68px;
   }
-    .swiper-button-prev svg,
-    .swiper-button-next svg {
+  .projects-prev.swiper-button-prev svg,
+  .projects-next.swiper-button-next svg {
     width: 32px;
     height: 32px;
   }
@@ -186,6 +186,7 @@
     width: 1376px;
     height: 813px;
     padding-top: 82px;
+    padding-bottom: 82px;
   }
 
   .project-swiper-slide {
@@ -206,7 +207,5 @@
   .projects-list {
     padding-bottom: 223px;
   }
-  .projects-arrows {
-    padding-bottom: 82px;
-  }
+  
 }
