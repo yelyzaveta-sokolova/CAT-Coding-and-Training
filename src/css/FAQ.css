@@ -1,0 +1,138 @@
+.section-faq {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.title-faq {
+  color: rgba(250, 250, 250, 0.4);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+}
+
+.faq-ac-trigger {
+  background-color: transparent;
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #fafafa;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: -0.4px;
+  cursor: pointer;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.faq-ac {
+  flex: 1 1 100%;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-ac:first-child {
+  border-top: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 100px;
+  flex-shrink: 0;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.faq-icon {
+  stroke-width: 2;
+  transition: transform 0.3s ease;
+}
+
+.faq-ac-panel {
+  max-height: 0;
+  overflow: hidden;
+  color: rgba(250, 250, 250, 0.6);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  transition: max-height 0.3s ease;
+  padding: 0;
+}
+
+.faq-ac-panel > .faq-ac-text {
+  margin-bottom: 20px;
+}
+
+.faq-ac.faq-is-active .faq-ac-panel {
+  max-height: 1000px;
+}
+
+.faq-ac.faq-is-active .faq-icon {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+  .section-faq {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .faq-ac-trigger {
+    padding-top: 32px;
+    padding-bottom: 42px;
+  }
+
+  .faq-ac:last-child .ac-trigger {
+    padding-bottom: 32px;
+  }
+
+  .faq-ac-panel > .faq-ac-text {
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-faq {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+
+  .faq-accordion-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .faq-ac {
+    flex: 1 1 48%;
+  }
+
+  .faq-ac-panel > .faq-ac-text {
+    margin-bottom: 26px;
+  }
+
+  .faq-ac:nth-child(odd) {
+    border-right: 1px solid rgba(250, 250, 250, 0.2);
+    padding-right: 32px;
+  }
+
+  .faq-ac:nth-child(2) {
+    border-top: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  .faq-ac:nth-child(even) {
+    padding-left: 32px;
+  }
+}
