@@ -1,7 +1,4 @@
-import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
-
-const accordion = new Accordion('.about-me__accord_list', {
+const ACCORDION = new Accordion('.about-me__accord_list', {
   duration: 350,
   elementClass: 'about-me__accord_item',
   triggerClass: 'about-me__accord_trigger',

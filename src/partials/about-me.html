@@ -1,65 +1,64 @@
-<section class="section-padding">
+<section class="about-me">
   <div class="container">
-    <h2 class="visually-hidden">About me</h2>
-    <div class="about-me__preview">
-      <div class="about-me__preview_descr">
-        <p>
+    <h2 class="visually-hidden-about-me-title">About me</h2>
+    <div class="about-me-preview">
+      <div class="about-me-preview-descr">
+        <p class="about-me-p">
           I work with people all over the world to create impressive and
           <span class="primary-accent-text">functional</span>
           <span class="secondary-accent-text">websites</span> that reflect each
           client's unique personality.
         </p>
       </div>
-      <div class="about-me__preview_photo">
+      <div class="about-me-preview-photo">
         <picture>
           <source
             srcset="
-              /img/about-me/developer-desktop@1x-min.jpg 1x,
-              /img/about-me/developer-desktop@2x-min.jpg 2x
+              ./img/about-me/developer-desktop@1x-min.jpg 1x,
+              ./img/about-me/developer-desktop@2x-min.jpg 2x
             "
             media="(min-width: 1440px)"
           />
           <source
             srcset="
-              /img/about-me/developer-tablet@1x-min.jpg 1x,
-              /img/about-me/developer-tablet@2x-min.jpg 2x
+              ./img/about-me/developer-tablet@1x-min.jpg 1x,
+              ./img/about-me/developer-tablet@2x-min.jpg 2x
             "
             media="(min-width: 768px)"
           />
           <source
             srcset="
-              /img/about-me/developer-mobile@1x-min.jpg 1x,
-              /img/about-me/developer-mobile@2x-min.jpg 2x
+              ./img/about-me/developer-mobile@1x-min.jpg 1x,
+              ./img/about-me/developer-mobile@2x-min.jpg 2x
             "
           />
           <img
-            src="../img/about-me/developer-desktop@1x-min.jpg"
+            src="./img/about-me/developer-desktop@1x-min.jpg"
             alt="Lloyd Jefferson"
           />
         </picture>
       </div>
     </div>
 
-    <ul class="about-me__accord_list accordion-container">
-      <li class="about-me__accord_item">
-        <button type="button" class="about-me__accord_trigger">
-          about me
-          <span class="about-me__accord_trigger_icon">
-            <svg width="20" height="20">
-              <use
-                class="icon-arrow-down"
-                href="/img/icon.svg#icon-arrow-down"
-              ></use>
-              <use
-                class="icon-arrow-up"
-                href="/img/icon.svg#icon-arrow-up"
-              ></use>
-            </svg>
-          </span>
-        </button>
+    <ul class="about-me-accord-list accordion-container">
+      <li class="about-me-accord-item">
+        <h3 class="about-me-btn">
+          <button type="button" class="about-me-accord-trigger">
+            about me
+            <span class="about-me-accord-trigger-icon">
+              <svg width="20" height="20" class="icon-arrow-down">
+                <use href="./img/icons.svg#icon-arrow-down"></use>
+                <use
+                  class="icon-arrow-up"
+                  href="./img/icons.svg#icon-arrow-up"
+                ></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
 
-        <div class="about-me__accord_panel">
-          <p class="about-me__accord_text">
+        <div class="about-me-accord-panel">
+          <p class="about-me-accord-text">
             I am Lloyd Jefferson, a talented programmer with extensive expertise
             in software development. I have an understanding of different
             programming languages and technologies, always ready to improve my
@@ -68,7 +67,7 @@
             of analytical skills and am able to effectively solve even the most
             difficult tasks encountered on the way.
           </p>
-          <p class="about-me__accord_text">
+          <p class="about-me-accord-text">
             Able to work both independently and in a team. I can effectively
             cooperate with colleagues, exchanging ideas and finding optimal
             solutions. Professional maturity allows you to calmly cope with
@@ -82,54 +81,52 @@
           </p>
         </div>
       </li>
-      <li class="about-me__accord_item">
-        <button type="button" class="about-me__accord_trigger">
-          role
-          <span class="about-me__accord_trigger_icon">
-            <svg width="20" height="20">
-              <use
-                class="icon-arrow-down"
-                href="/img/icon.svg#icon-arrow-down"
-              ></use>
-              <use
-                class="icon-arrow-up"
-                href="/img/icon.svg#icon-arrow-up"
-              ></use>
-            </svg>
-          </span>
-        </button>
-        <div class="about-me__accord_panel">
-          <p class="about-me__accord_text">Frontend development</p>
-          <p class="about-me__accord_text">HeadlessCMS,Wordpress</p>
-          <p class="about-me__accord_text">Blender(enjoy)</p>
+      <li class="about-me-accord-item">
+        <h3 class="about-me-btn">
+          <button type="button" class="about-me-accord-trigger">
+            role
+            <span class="about-me-accord-trigger-icon">
+              <svg width="20" height="20" class="icon-arrow-down">
+                <use href="./img/icons.svg#icon-arrow-down"></use>
+                <use
+                  class="icon-arrow-up"
+                  href="./img/icons.svg#icon-arrow-up"
+                ></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="about-me-accord-panel">
+          <p class="about-me-accord-text">Frontend development</p>
+          <p class="about-me-accord-text">HeadlessCMS,Wordpress</p>
+          <p class="about-me-accord-text">Blender(enjoy)</p>
         </div>
       </li>
-      <li class="about-me__accord_item">
-        <button type="button" class="about-me__accord_trigger">
-          education
-          <span class="about-me__accord_trigger_icon">
-            <svg width="20" height="20">
-              <use
-                class="icon-arrow-down"
-                href="/img/icon.svg#icon-arrow-down"
-              ></use>
-              <use
-                class="icon-arrow-up"
-                href="/img/icon.svg#icon-arrow-up"
-              ></use>
-            </svg>
-          </span>
-        </button>
-        <div class="about-me__accord_panel">
-          <p class="about-me__accord_text">
+      <li class="about-me-accord-item">
+        <h3 class="about-me-btn">
+          <button type="button" class="about-me-accord-trigger">
+            education
+            <span class="about-me-accord-trigger-icon">
+              <svg width="20" height="20" class="icon-arrow-down">
+                <use href="./img/icons.svg#icon-arrow-down"></use>
+                <use
+                  class="icon-arrow-up"
+                  href="./img/icons.svg#icon-arrow-up"
+                ></use>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div class="about-me-accord-panel">
+          <p class="about-me-accord-text">
             2018 - 2019 / Frontend Development Diploma, GoIT IT <br />
             School, New York
           </p>
-          <p class="about-me__accord_text">
+          <p class="about-me-accord-text">
             2019 - 2020 / Advanced Web Development Certificate, GoIT IT <br />
             School, New York
           </p>
-          <p class="about-me__accord_text">
+          <p class="about-me-accord-text">
             2020 - 2022 / Advanced Blender Animation Techniques, Udemy
           </p>
         </div>

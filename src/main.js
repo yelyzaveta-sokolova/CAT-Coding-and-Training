@@ -10,6 +10,3 @@ import './js/reviews';
 import './js/footer';
 import './js/modal-window';
 import './js/mobile-menu';
-
-
-
