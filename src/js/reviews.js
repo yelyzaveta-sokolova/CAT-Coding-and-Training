@@ -14,11 +14,11 @@ const GET_USERS = async () => {
         method: 'GET',
     };
     try {
-        const response = await fetch(`${BASE_URL}/reviews`, FETCH_OPTIONS);
-        if (!response.ok) {
-            throw new Error(response.status);
+        const RESPONSE = await fetch(`${BASE_URL}/reviews`, FETCH_OPTIONS);
+        if (!RESPONSE.ok) {
+            throw new Error(RESPONSE.status);
         }
-        const DATA = await response.json();
+        const DATA = await RESPONSE.json();
         return DATA;
     } catch (error) {
         return error;
@@ -30,13 +30,13 @@ const GET_USERS = async () => {
         initializeSwiper();
 })
 .catch(error => {
-    {
+            {
             iziToast.error({
                 title: 'Error',
                 message: 'Sorry, something went wrong with reviews.',
                 position: 'center',
             });
-        }
+            }
     errorList();
 });
 
@@ -58,11 +58,11 @@ function renderPosts(DATA) {
 
 function errorList() {
 
-   const element = document.querySelector('.error');
-   if (element) {
-       element.remove();
+   const ELEMENT = document.querySelector('.error');
+   if (ELEMENT) {
+       ELEMENT.remove();
    }
-  const MARKUP = `<p class="main-text-with-opacity review-error">Not Found</p>`;
+  const MARKUP = `<p class="review-error">Not Found</p>`;
 
   REVIEW_CARDS.insertAdjacentHTML('beforebegin', MARKUP);
 }
