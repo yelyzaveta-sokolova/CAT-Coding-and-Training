@@ -5,7 +5,7 @@ const ACCORDION = new Accordion('.about-me-accord-list', {
   elementClass: 'about-me-accord-item',
   triggerClass: 'about-me-accord-trigger',
   panelClass: 'about-me-accord-panel',
-  showMultiple: false,
+  showMultiple: true,
   onOpen: onOpenHandle,
 });
 
@@ -16,19 +16,19 @@ setTimeout(() => {
 }, 1000);
 
 function onOpenHandle(currElement) {
-  const activeAcRect = currElement.getBoundingClientRect();
+  const ACTIVEACRECT = currElement.getBoundingClientRect();
 
   const viewHeight = Math.max(
     document.documentElement.clientHeight,
     window.innerHeight
   );
 
-  if (activeAcRect.bottom > viewHeight) {
+  if (ACTIVEACRECT.bottom > viewHeight) {
     window.scrollTo({
       top:
-        activeAcRect.top +
+        ACTIVEACRECT.top +
         window.scrollY -
-        (viewHeight - activeAcRect.height) / 2,
+        (viewHeight - ACTIVEACRECT.height) / 2,
       behavior: 'smooth',
     });
   }
