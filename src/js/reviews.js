@@ -62,7 +62,7 @@ function errorList() {
    if (ELEMENT) {
        ELEMENT.remove();
    }
-  const MARKUP = `<p class="review-error">Not Found</p>`;
+  const MARKUP = `<p class="main-text-with-opacity review-error">Not Found</p>`;
 
   REVIEW_CARDS.insertAdjacentHTML('beforebegin', MARKUP);
 }
