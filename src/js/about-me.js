@@ -1,18 +1,18 @@
-const ACCORDION = new Accordion('.about-me__accord_list', {
+import Accordion from 'accordion-js';
+
+const ACCORDION = new Accordion('.about-me-accord-list', {
   duration: 350,
-  elementClass: 'about-me__accord_item',
-  triggerClass: 'about-me__accord_trigger',
-  panelClass: 'about-me__accord_panel',
-  showMultiple: true,
+  elementClass: 'about-me-accord-item',
+  triggerClass: 'about-me-accord-trigger',
+  panelClass: 'about-me-accord-panel',
+  showMultiple: false,
   onOpen: onOpenHandle,
 });
 
-accordion.detachEvents();
-
-accordion.open(0);
+ACCORDION.open(0);
 
 setTimeout(() => {
-  accordion.attachEvents();
+  ACCORDION.attachEvents();
 }, 1000);
 
 function onOpenHandle(currElement) {
