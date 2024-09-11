@@ -1,66 +1,40 @@
-import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
 import Swiper from 'swiper';
-import 'swiper/css';
+import { Keyboard, Navigation } from 'swiper/modules';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const width = window.innerWidth;
-  if (width < 1440) {
-    new Swiper('.swiper-about', {
-      slidesPerView: 2,
-      spaceBetween: 0,
-      slideToClickedSlide: true,
-      loop: true,
-      loopedSlides: 1,
-      keyboard: {
-        enabled: true,
-        onlyInViewport: true,
+  const SKILLS_SWIPER = new Swiper('.skills-me-swiper', {
+    modules: [Navigation, Keyboard],
+    navigation: {
+      nextEl: '.swiper-button-wrap .skills-swiper-btn',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+    },
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
       },
-      breakpoints: {
-        320: {
-          loop: true,
-          loopedSlides: 1,
-          slidesPerView: 2,
-          spaceBetween: 0,
-          slideToClickedSlide: true,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 0,
-          slideToClickedSlide: true,
-          loop: true,
-          loopedSlides: 1,
-        },
+      768: {
+        slidesPerView: 3,
       },
-      navigation: {
-        nextEl: '.swiper-button-next.btn-next-skill',
+      1440: {
+        slidesPerView: 6,
       },
-    });
-  }
-});
+    },
+    centeredSlidesBounds: true,
+    speed: 400,
+  });
 
-const skillList = document.querySelector('.list-my-skills');
-const skills = skillList.children;
-const buttonNext = document.querySelector('.btn-next-skill');
-let currentActive = skills[0];
-
-function updateActive() {
-  currentActive.classList.remove('active');
-
-  let nextActive = currentActive.nextElementSibling;
-  if (!nextActive) {
-    nextActive = skillList.firstElementChild;
-  }
-
-  currentActive = nextActive;
-  currentActive.classList.add('active');
-}
-
-buttonNext.addEventListener('click', () => {
-  updateActive();
-});
-document.addEventListener('keydown', e => {
-  if (e.key === 'ArrowRight') {
-    updateActive();
+const SKILLS_NEXTBUTTON = document.querySelector(
+  '.swiper-button-wrap .skills-swiper-btn'
+);
+SKILLS_NEXTBUTTON.addEventListener('click', () => {
+  if (window.innerWidth >= 1440) {
+    SKILLS_SWIPER.slides[SKILLS_SWIPER.activeIndex].parentNode.appendChild(
+      SKILLS_SWIPER.slides[SKILLS_SWIPER.activeIndex]
+    );
+    SKILLS_SWIPER.update();
   }
 });
