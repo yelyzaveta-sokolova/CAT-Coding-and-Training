@@ -5,6 +5,7 @@
 
 .skills-container-swiper {
     display: flex;
+    justify-content: space-between;
 }
 
 .skills-me-swiper {
@@ -23,7 +24,7 @@
 .skills-skills-item {
     width: 130px;
     height: 130px;
-    border: 1px solid #444;
+    border: rgba(250, 250, 250, 0.2);
     display: flex;
     justify-content: center;
 
@@ -40,7 +41,7 @@
     font-weight: 500;
     font-size: 16px;
     letter-spacing: -0.02em;
-    line-height: 1,5
+    line-height: 1,5;
 }
 
 .swiper-button-wrap {
@@ -76,14 +77,15 @@
         height: 200px;
         width: 200px;
     }
-
-    .skills-skills-item {
-        width: 200px;
-        height: 200px;
-    }
+        .skills-icon-swiper {
+            width: 40px;
+            height: 40px;
+        }
 
     .skills-skills-text {
         font-size: 20px;
+        padding-top: 88px;
+            padding-bottom: 88px;
     }
 
     .swiper-button-wrap {
@@ -105,14 +107,11 @@
     }
     .skills-me-swiper {
         width: 1232px;
-        padding-left: 32px;
-    }
-
-    .swiper-button-wrap {
-        margin-left: 72px;
     }
 
     .skills-container-swiper {
         margin-bottom: 164px;
+        padding-right: 32px;
+        padding-left: 32px;
     }
 }
