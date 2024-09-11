@@ -1,0 +1,77 @@
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-top">
+      <picture>
+        <source
+          srcset="
+            ./img/footer/photo-desktop-tablet-min.png    1x,
+            ./img/footer/photo-desktop-tablet@2x-min.png 2x
+          "
+          media="(min-width: 1440px)"
+          type="image/png"
+        />
+        <source
+          srcset="
+            ./img/footer/photo-desktop-tablet-min.png    1x,
+            ./img/footer/photo-desktop-tablet@2x-min.png 2x
+          "
+          media="(min-width: 768px)"
+          type="image/png"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./img/footer/photo-mobile-min.png    1x,
+            ./img/footer/photo-mobile@2x-min.png 2x
+          "
+          type="image/png"
+        />
+
+        <img
+          src="./img/footer/photo-desktop-tablet@2x-min.png"
+          alt="profil avatar"
+          class="footer-img"
+        />
+      </picture>
+      <h2 class="footer-title">
+        Let’s <span class="accent-color">work</span> together
+      </h2>
+    </div>
+    <form class="footer-form js-footer-form" novalidate>
+      <label class="footer-form-label" for="email">
+        <input
+          class="footer-form-input js-footer-form-input"
+          type="email"
+          name="email"
+          id="email"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          placeholder="clients@gmail.com"
+          required
+        />
+        <span class="js-message is-hidden"></span>
+      </label>
+      <input
+        class="footer-form-input footer-form-input-comment js-comment"
+        type="text"
+        name="comment"
+        id="comment"
+        placeholder="comments"
+      />
+      <button class="footer-form-btn js-footer-form-btn" type="submit">
+        Send
+      </button>
+    </form>
+    <ul class="footer-contacts">
+      <li class="footer-contacts-item">
+        <a class="footer-contacts-item-link" href="mailto:"
+          >lloydjefferson@gmail.com</a
+        >
+      </li>
+      <li class="footer-contacts-item">
+        <a class="footer-contacts-item-link" href="tel:+3801111111111"
+          >+380 11 1111 11 11</a
+        >
+      </li>
+    </ul>
+  </div>
+</footer>
