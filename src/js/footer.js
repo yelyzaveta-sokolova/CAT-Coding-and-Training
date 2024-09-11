@@ -1,5 +1,6 @@
 import axios from 'axios';
 import iziToast from 'izitoast';
+import { OPEN_MODAL } from './modal-window';
 
 const FORM_EL = document.querySelector('.js-footer-form');
 const USER_EMAIL_EL = document.querySelector('.js-footer-form-input');
@@ -63,7 +64,7 @@ const ON_FORM_FIELD_INPUT = event => {
 
 FORM_EL.addEventListener('input', ON_FORM_FIELD_INPUT);
 
-const ON_SEND_FORM_DATA = async event => {
+export const ON_SEND_FORM_DATA = async event => {
   event.preventDefault();
 
   if (
@@ -87,8 +88,9 @@ const ON_SEND_FORM_DATA = async event => {
     console.log(response);
     FORM_EL.reset();
     localStorage.removeItem('comment-form');
-    // MODAL.classList.remove('is-hidden');
-    // OVARLAY.classList.remove('is-hidden');
+    OPEN_MODAL(response.data.title, response.data.message);
+    USER_EMAIL_EL.classList.remove('error', 'success');
+    MESSAGE_OUTPUT_EL.classList.add('is-hidden');
   } catch (err) {
     iziToast.error({
       title: 'Error:',
