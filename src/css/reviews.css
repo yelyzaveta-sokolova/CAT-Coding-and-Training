@@ -15,7 +15,7 @@
 }
 
 .js-review-cards {
-    display: grid;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: auto;

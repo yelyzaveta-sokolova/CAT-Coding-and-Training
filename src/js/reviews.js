@@ -1,5 +1,5 @@
-import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
-import 'swiper/css';
+import Swiper from 'swiper/bundle';
+import "swiper/css/bundle";
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
