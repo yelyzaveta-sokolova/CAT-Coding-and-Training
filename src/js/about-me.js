@@ -22,15 +22,7 @@ function onOpenHandle(currElement) {
     document.documentElement.clientHeight,
     window.innerHeight
     );
-    if (ACTIVEACRECT.bottom > VIEW_HEIGHT) {
-    window.scrollTo({
-        top:
-        ACTIVEACRECT.top +
-        window.scrollY - 
-        (VIEW_HEIGHT - ACTIVEACRECT.height) / 2,
-        behavior: 'smooth',
-        });
-    }
+
 }
 
 function onCloseHandle(currElement) {
