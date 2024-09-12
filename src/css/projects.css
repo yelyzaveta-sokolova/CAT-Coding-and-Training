@@ -1,7 +1,12 @@
 .projects {
   padding-top: 32px;
   padding-bottom: 32px;
+  /* width: 343px;
+  height: 952px; */
+  /* padding-left: 0;
+  padding-right: 0; */
 }
+
 .projects-title {
   font-weight: 600;
   font-size: 16px;
@@ -11,23 +16,33 @@
   color: rgba(250, 250, 250, 0.4);
   margin-bottom: 32px;
 }
+
 .projects-swiper {
   overflow: hidden;
   max-width: 343px;
   max-height: 952px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.swiper-slide-part-1 {
+.projects-swiper-wrapper .swiper-wrapper {
+  height: 812px;
+}
+
+.project-swiper-slide-part-1 {
   background: #fafafa;
   height: 417px;
   border-radius: 24px 24px 0 0;
 }
+
 .projects-list {
   display: flex;
   flex-wrap: wrap;
+
   gap: 6px;
   padding: 32px 32px 96px 32px;
 }
+
 .projects-item {
   font-weight: 500;
   font-size: 16px;
@@ -40,6 +55,7 @@
   height: 45px;
   text-align: center;
 }
+
 .projects-description {
   font-weight: 500;
   font-size: 24px;
@@ -49,6 +65,7 @@
   margin-left: 32px;
   margin-right: 32px;
 }
+
 .projects-btn {
   border-radius: 60px;
   padding: 13px 32px;
@@ -61,11 +78,13 @@
   color: #fafafa;
   margin: 32px 0 32px 32px;
 }
+
 .projects-btn:hover,
 .projects-btn:focus {
   background: #e0373f;
 }
-.swiper-slide-part-2 {
+
+.project-swiper-slide-part-2 {
   background: #242527;
   height: 395px;
   display: flex;
@@ -73,6 +92,7 @@
   align-items: center;
   border-radius: 0 0 24px 24px;
 }
+
 .projects-arrows {
   display: flex;
   flex-direction: row;
@@ -80,39 +100,43 @@
   align-items: center;
   gap: 12px;
   padding-top: 32px;
+  padding-bottom: 32px;
 }
-#prev,
-#next {
+
+#project-prev,
+#project-next {
   margin: 0;
   position: static;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(250, 250, 250, 0.5);
+  color: rgba(250, 250, 250, 1);
+  border: 1px solid rgba(250, 250, 250, 1);
   border-radius: 60px;
   width: 52px;
   height: 52px;
 }
-#prev:hover,
-#next:hover {
-  border-color: rgba(250, 250, 250, 0.2);
+
+#project-prev:hover,
+#project-next:hover {
+  border-color: #3b3b3b;
 }
 
-.projects-icon-prev {
-  stroke: #fafafa;
+#project-prev:hover .project-icon,
+#project-next:hover .project-icon {
+  stroke: #3b3b3b;
+}
+
+.projects-arrows .project-icon {
+  fill: none;
+  stroke: rgba(250, 250, 250, 0.5);
+  width: 24px;
+  height: 24px;
+}
+
+.projects-arrows .project-icon-prev {
   transform: rotate(-180deg);
-}
-.projects-icon {
-  stroke: #fafafa;
-}
-
-#prev:hover .projects-icon-prev,
-#next:hover .projects-icon {
-  stroke: rgba(250, 250, 250, 0, 2);
-}
-.projects-prev.swiper-button-prev svg,
-.projects-next.swiper-button-next svg {
   width: 24px;
   height: 24px;
 }
@@ -131,25 +155,32 @@
     padding-top: 48px;
     padding-bottom: 48px;
   }
+
   .projects-swiper {
     max-width: 704px;
     max-height: 1379px;
   }
-  .swiper-slide-part-1 {
+
+  .project-swiper-slide-part-1 {
     height: 566px;
   }
-  .swiper-slide-part-2 {
+
+  .project-swiper-slide-part-2 {
     height: 625px;
   }
+
+
   .projects-list {
     padding-left: 64px;
     padding-top: 64px;
     padding-bottom: 164px;
   }
+
   .projects-item {
     height: 55px;
-    padding: 18px;
+    padding: 18px 18px;
   }
+
   .projects-description {
     font-size: 44px;
     width: 494px;
@@ -157,6 +188,7 @@
     margin-left: 64px;
     line-height: 1;
   }
+
   .projects-btn {
     padding: 18px 50px;
     width: 177px;
@@ -164,19 +196,25 @@
     margin-left: 64px;
     margin-bottom: 64px;
   }
+
   .projects-arrows {
     padding-top: 64px;
+    padding-bottom: 48px;
+    gap: 20px;
   }
-  #prev,
-  #next {
+
+  #project-prev,
+  #project-next {
     width: 68px;
     height: 68px;
   }
-  .projects-prev.swiper-button-prev svg,
-  .projects-next.swiper-button-next svg {
+
+  .projects-arrows .project-icon,
+  .projects-arrows .project-icon-prev {
     width: 32px;
     height: 32px;
   }
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -186,26 +224,30 @@
     padding-top: 82px;
     padding-bottom: 82px;
   }
+
   .projects-swiper {
     max-width: 1376px;
     max-height: 813px;
   }
+
   .project-swiper-slide {
     display: flex !important;
     flex-direction: row;
   }
 
-  .swiper-slide-part-2 {
+  .project-swiper-slide-part-2 {
     width: 688px;
     height: 625px;
     border-radius: 0 24px 24px 0;
   }
-  .swiper-slide-part-1 {
+
+  .project-swiper-slide-part-1 {
     width: 688px;
     height: 625px;
     border-radius: 24px 0 0 24px;
   }
-  .projects-list {
-    padding-bottom: 223px;
+
+  .projects-arrows {
+    padding-bottom: 82px;
   }
 }
