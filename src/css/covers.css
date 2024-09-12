@@ -1,0 +1,121 @@
+.covers {
+  padding-bottom: 32px;
+  padding-top: 32px;
+}
+.covers-container {
+  min-width: 320px;
+  max-width: 375px;
+  height: 508px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.marquee {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 508px;
+  background-image: url('../img/covers/elements_vectors-min.png');
+  background-repeat: no-repeat;
+  background-size: auto 510px;
+  background-position: right 0% bottom 10%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.marquee-inner {
+  display: flex;
+  height: 163px;
+  transform: rotate(15deg);
+  margin-bottom: 30px;
+}
+
+.marquee-line {
+  display: block;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin: 0;
+  margin-right: 30px;
+  width: 282px;
+  height: 163px;
+  animation-name: marqueeLine;
+  animation-duration: 7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.covers-img {
+  display: block;
+  width: 282px;
+  height: 163px;
+  object-fit: cover;
+}
+@keyframes marqueeLine {
+  from {
+    transform: translateX(-20%);
+  }
+
+  to {
+    transform: translateX(-180%);
+  }
+}
+@media (min-resolution: 192dpi) {
+  .marquee {
+    background-image: url('../img/covers/elements_vectors@2x-min.png');
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .covers {
+    padding-bottom: 48px;
+    padding-top: 48px;
+  }
+  .covers-container {
+    max-width: 768px;
+    height: 960px;
+  }
+
+  .marquee {
+    height: 960px;
+    background-size: cover;
+    background-position: left 50% bottom 10%;
+  }
+
+  .marquee-inner {
+    height: 314px;
+    margin-bottom: 60px;
+  }
+  .marquee-line {
+    width: 545px;
+    height: 314px;
+    margin-right: 60px;
+  }
+  .covers-img {
+    width: 545px;
+    height: 314px;
+  }
+}
+@media (min-resolution: 192dpi) and (min-width: 768px) {
+  .marquee {
+    background-image: url('../img/covers/elements_vectors@2x-min.png');
+  }
+}
+@media screen and (min-width: 1440px) {
+  .covers {
+    padding-bottom: 82px;
+    padding-top: 82px;
+  }
+  .covers-container {
+    max-width: 1440px;
+  }
+  .marquee {
+    background-size: auto 1300px;
+    background-position: left 1% bottom 70%;
+  }
+}
+@media (min-resolution: 192dpi) and (min-width: 1440px) {
+  .marquee {
+    background-image: url('../img/covers/elements_vectors@2x-min.png');
+  }
+}

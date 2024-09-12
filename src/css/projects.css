@@ -1,0 +1,250 @@
+.projects {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.projects-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
+
+.projects-swiper {
+  overflow: hidden;
+  max-width: 343px;
+  max-height: 952px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.projects-swiper-wrapper .swiper-wrapper {
+  height: 812px;
+}
+
+.project-swiper-slide-part-1 {
+  background: #fafafa;
+  height: 417px;
+  border-radius: 24px 24px 0 0;
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 6px;
+  padding: 32px 32px 96px 32px;
+}
+
+.projects-item {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #1c1d20;
+  border: 1px solid rgba(28, 29, 32, 0.2);
+  border-radius: 60px;
+  padding: 13px 18px;
+  width: auto;
+  height: 45px;
+  text-align: center;
+}
+
+.projects-description {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  color: #1c1d20;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.projects-btn {
+  border-radius: 60px;
+  padding: 13px 32px;
+  width: 141px;
+  height: 45px;
+  background: #ed3b44;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  margin: 32px 0 32px 32px;
+}
+
+.projects-btn:hover,
+.projects-btn:focus {
+  background: #e0373f;
+}
+
+.project-swiper-slide-part-2 {
+  background: #242527;
+  height: 395px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 24px 24px;
+}
+
+.projects-arrows {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+#project-prev,
+#project-next {
+  margin: 0;
+  position: static;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(250, 250, 250, 1);
+  border: 1px solid rgba(250, 250, 250, 1);
+  border-radius: 60px;
+  width: 52px;
+  height: 52px;
+  transition: border 0.2s cubic-bezier(0.34, 0.78, 0.68, 0.41);
+}
+
+#project-prev:hover,
+#project-next:hover {
+  border-color: #3b3b3b;
+}
+
+#project-prev:hover .project-icon,
+#project-next:hover .project-icon {
+  stroke: #3b3b3b;
+}
+
+.projects-arrows .project-icon {
+  fill: none;
+  stroke: rgba(250, 250, 250, 1);
+  width: 24px;
+  height: 24px;
+}
+
+.projects-arrows .project-icon-prev {
+  transform: rotate(-180deg);
+  width: 24px;
+  height: 24px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after,
+.swiper-button-next::before,
+.swiper-button-prev::before {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .projects {
+    width: auto;
+    height: auto;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .projects-swiper {
+    max-width: 704px;
+    max-height: 1379px;
+  }
+
+  .project-swiper-slide-part-1 {
+    height: 566px;
+  }
+
+  .project-swiper-slide-part-2 {
+    height: 625px;
+  }
+
+
+  .projects-list {
+    padding-left: 64px;
+    padding-top: 64px;
+    padding-bottom: 164px;
+  }
+
+  .projects-item {
+    height: 55px;
+    padding: 18px 18px;
+  }
+
+  .projects-description {
+    font-size: 44px;
+    width: 494px;
+
+    margin-left: 64px;
+    line-height: 1;
+  }
+
+  .projects-btn {
+    padding: 18px 50px;
+    width: 177px;
+    height: 55px;
+    margin-left: 64px;
+    margin-bottom: 64px;
+  }
+
+  .projects-arrows {
+    padding-top: 64px;
+    padding-bottom: 48px;
+    gap: 20px;
+  }
+
+  #project-prev,
+  #project-next {
+    width: 68px;
+    height: 68px;
+  }
+
+  .projects-arrows .project-icon,
+  .projects-arrows .project-icon-prev {
+    width: 32px;
+    height: 32px;
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+  .projects {
+    width: auto;
+    height: auto;
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+
+  .projects-swiper {
+    max-width: 1376px;
+    max-height: 813px;
+  }
+
+  .project-swiper-slide {
+    display: flex !important;
+    flex-direction: row;
+  }
+
+  .project-swiper-slide-part-2 {
+    width: 688px;
+    height: 625px;
+    border-radius: 0 24px 24px 0;
+  }
+
+  .project-swiper-slide-part-1 {
+    width: 688px;
+    height: 625px;
+    border-radius: 24px 0 0 24px;
+  }
+
+  .projects-arrows {
+    padding-bottom: 82px;
+  }
+}
