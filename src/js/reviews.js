@@ -4,8 +4,8 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const REVIEW_CARDS = document.querySelector(".js-review-cards");
-const BUTTON_NEXT = document.querySelector(".swiper-button-next");
-const BUTTON_PREV = document.querySelector(".swiper-button-prev");
+const BUTTON_NEXT = document.querySelector(".rev-n");
+const BUTTON_PREV = document.querySelector(".rev-p");
 
 const BASE_URL = 'https://portfolio-js.b.goit.study/api';
 
@@ -62,12 +62,12 @@ function errorList() {
    if (ELEMENT) {
        ELEMENT.remove();
    }
-  const MARKUP = `<p class="main-text-with-opacity review-error">Not Found</p>`;
+  const MARKUP = `<p class="review-error">Not Found</p>`;
 
   REVIEW_CARDS.insertAdjacentHTML('beforebegin', MARKUP);
 }
 
-// // реалізація свайпу
+// реалізація свайпу
 
 function initializeSwiper() {
     try {
@@ -80,9 +80,7 @@ function initializeSwiper() {
                 onlyInViewport: true,
                 pageUpDown: true
             },
-            mousewheel: {
-                sensitivity: 1,
-            },
+        
             navigation: {
                 nextEl: BUTTON_NEXT,
                 prevEl: BUTTON_PREV,
@@ -109,4 +107,3 @@ function initializeSwiper() {
         }
     }
 }
-
