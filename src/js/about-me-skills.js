@@ -4,7 +4,7 @@ import { Keyboard, Navigation } from 'swiper/modules';
   const SKILLS_SWIPER = new Swiper('.skills-me-swiper', {
     modules: [Navigation, Keyboard],
     navigation: {
-      nextEl: '.swiper-button-wrap .skills-swiper-btn',
+      nextEl: '.skills-swiper-btn',
     },
     keyboard: {
       enabled: true,
@@ -28,7 +28,7 @@ import { Keyboard, Navigation } from 'swiper/modules';
   });
 
 const SKILLS_NEXTBUTTON = document.querySelector(
-  '.swiper-button-wrap .skills-swiper-btn'
+  '.skills-swiper-btn'
 );
 SKILLS_NEXTBUTTON.addEventListener('click', () => {
   if (window.innerWidth >= 1440) {

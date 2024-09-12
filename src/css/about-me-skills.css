@@ -24,7 +24,7 @@
 .skills-skills-item {
     width: 130px;
     height: 130px;
-    border: rgba(250, 250, 250, 0.2);
+    border:1px solid rgba(250, 250, 250, 0.2);
     display: flex;
     justify-content: center;
 
@@ -42,6 +42,8 @@
     font-size: 16px;
     letter-spacing: -0.02em;
     line-height: 1,5;
+    padding-top: 53px;
+        padding-bottom: 53px;
 }
 
 .swiper-button-wrap {
@@ -58,7 +60,7 @@
     background-color: transparent;
 }
 
-.skills-icon-swiper {
+.swiper-button-wrap .skills-icon-swiper {
     stroke: rgba(250, 250, 250, 0.2);
 
 }
