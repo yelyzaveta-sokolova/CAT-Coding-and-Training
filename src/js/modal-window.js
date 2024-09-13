@@ -9,7 +9,7 @@ const MODAL_TEXT_EL = document.querySelector('.modal-text');
 export const OPEN_MODAL = (title, message) => {
   MODAL_HEADING_EL.textContent = title;
   MODAL_TEXT_EL.textContent = message;
-
+  document.body.style.overflow = 'hidden';
   MODAL_WINDOW.style.display = 'block';
   MODAL_OVERLAY.style.display = 'block';
   MODAL_WINDOW.classList.add('show');
@@ -40,17 +40,7 @@ CLOSE_BTN.addEventListener('click', () => {
 export const CLOSE_MODAL = () => {
   MODAL_WINDOW.classList.remove('show');
   MODAL_OVERLAY.classList.remove('show');
+  document.body.style.overflow = 'auto';
   MODAL_WINDOW.style.display = 'none';
   MODAL_OVERLAY.style.display = 'none';
 };
-
-const CHECK_SCROLL_POSITION = () => {
-  const footerRect = FOOTER_EL.getBoundingClientRect();
-
-  if (footerRect.top < window.innerHeight) {
-    MODAL_WINDOW.style.display = 'none';
-    MODAL_OVERLAY.style.display = 'none';
-  }
-};
-
-window.addEventListener('scroll', CHECK_SCROLL_POSITION);
