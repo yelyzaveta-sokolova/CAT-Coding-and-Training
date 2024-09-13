@@ -1,5 +1,7 @@
 .hero {
-    background: url('../img/hero/bg-mobile@1x-min.png') repeat-y fixed;
+    background-image: url('../img/hero/bg-mobile@1x-min.png');
+    background-repeat: repeat-y;
+    background-attachment: fixed;
     padding-top: 281px;
     padding-bottom: 32px;
 
@@ -76,7 +78,9 @@
 
 @media (min-resolution: 192dpi) {
     .hero {
-        background-image: url('../img/hero/bg-mobile@2x-min.png') repeat-y fixed;
+        background-image: url('../img/hero/bg-mobile@2x-min.png');
+        background-repeat: repeat-y;
+            background-attachment: fixed;
     }
 }
 
