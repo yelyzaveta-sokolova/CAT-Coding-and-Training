@@ -99,12 +99,10 @@ function initializeSwiper() {
             }
         });
     } catch (error) {
-        {
             iziToast.error({
                 title: 'Error',
                 message: 'Sorry, something went wrong with reviews.',
                 position: 'center',
             });
-        }
     }
 }
