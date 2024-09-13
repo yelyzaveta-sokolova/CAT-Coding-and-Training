@@ -9,7 +9,7 @@
     padding-top: 32px;
 }
 
-.header-wrapper{
+.header-wrapper {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -38,7 +38,8 @@
     transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-name-icon:hover, .header-name-icon:focus {
+.header-name-icon:hover,
+.header-name-icon:focus {
     width: 93px;
     height: 24px;
 }
@@ -51,8 +52,6 @@
     display: flex;
     justify-content: center;
     background-color: transparent;
-    color: #fff;
-    font-family: 'Inter Tight';
     font-size: 16px;
     font-weight: 500;
     line-height: 1.19;
@@ -62,7 +61,8 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-menu-link:hover, .header-menu-link:focus {
+.header-menu-link:hover,
+.header-menu-link:focus {
     color: rgb(237, 59, 68);
 }
 
@@ -97,7 +97,8 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-list-item-link:hover, .header-list-item-link:focus {
+.header-list-item-link:hover,
+.header-list-item-link:focus {
     color: rgb(237, 59, 68);
 }
 
@@ -137,14 +138,16 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100dvh;
+    height: 812px;
     transform: translateX(100%);
     opacity: 0;
+    background-color: inherit;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('./img/hero/bg-mobile@1x-min.png');
+    background-image: url('../img/mobile-menu/bg-mobile@1x-min.png');
+
     @media (min-resolution: 2dppx) {
-        background-image: url('./img/hero/bg-mobile@2x-min.png');
+        background-image: url('../img/mobile-menu/bg-mobile@2x-min.png');
         background-size: cover;
     }
 }
@@ -187,7 +190,8 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-burger-list-item-link:hover, .header-burger-list-item-link:focus {
+.header-burger-list-item-link:hover,
+.header-burger-list-item-link:focus {
     color: rgb(237, 59, 68);
 }
 
@@ -197,26 +201,26 @@
 
 .header-burger-order-btn-box {
     margin-bottom: 64px;
+
 }
 
 .header-burger-order-btn {
     display: flex;
-    width: 174px;
-    height: 56px;
-    padding: 18px 24px 18px 24px;
+    width: 164px;
+    height: 45px;
+    padding: 14px 31px;
     border-radius: 60px;
     color: rgb(250, 250, 250);
     background: rgb(237, 59, 68);
     margin-left: auto;
-    font-family: 'Inter Tight';
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
-    line-height: 1.19;
     letter-spacing: -0.02em;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-burger-order-btn:hover, .header-burger-order-btn:focus {
+.header-burger-order-btn:hover,
+.header-burger-order-btn:focus {
     background: rgb(224, 55, 63);
 }
 
@@ -225,38 +229,53 @@
 } */
 
 @media only screen and (min-width: 768px) {
-    
+    .header-container {
+        width: 100%;
+        padding-top: 32px;
+        z-index: 990;
+    }
+
     .header-menu-box {
         display: flex;
         flex-direction: column;
         animation-duration: 1s;
-        animation-name: slidein;
-        }
+        animation-name: slide;
+    }
+
+    .header-menu-link {
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        color: #fafafa;
+        padding: 10px;
+        width: 67px;
+        height: 39px;
+    }
 
     .header-order-btn {
         display: flex;
-        width: 174px;
-        height: 56px;
-        padding: 18px 24px 18px 24px;
+        width: 163px;
+        height: 55px;
+        padding: 18px 24px;
         border-radius: 60px;
         color: rgb(250, 250, 250);
         background-color: rgb(237, 59, 68);
         margin-left: auto;
-        font-family: 'Inter Tight';
         font-size: 16px;
         font-weight: 500;
         letter-spacing: -0.02em;
         animation-duration: 1s;
         animation-name: slidein;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
+
     .header-burger-btn-box {
         display: none;
     }
 
-    .header-order-btn:hover, .header-order-btn:focus {
+    .header-order-btn:hover,
+    .header-order-btn:focus {
         background-color: rgb(224, 55, 63);
         transform: scale(1.05);
     }
